@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Ukulele Pocket Trainer — Full</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+<header>
+  <h1>Ukulele Pocket Trainer — Full</h1>
+  <p>All songs loaded in fixed keys (your choice). Tap 'Install' to add to Home Screen.</p>
+  <button id="installBtn" style="display:none">Install</button>
+</header>
+<main>
+  <section class="search">
+    <input id="searchInput" placeholder="Search songs or press A-Z" autocomplete="off"/>
+    <div id="azbar"></div>
+  </section>
+  <section class="songlist">
+    <ul id="songList"></ul>
+  </section>
+  <section class="player">
+    <div id="songTitle" class="songTitle">No song loaded</div>
+    <div class="controls">
+      <button id="playBtn">Play</button>
+      <button id="metBtn">Metronome: Off</button>
+      <select id="patternSelect">
+        <option value="travis">Travis</option><option value="rolling">Rolling</option><option value="syncop">Syncopated</option><option value="forward">Forward</option>
+      </select>
+      <label>Tempo <span id="tempoDisplay">90</span></label>
+      <input id="tempo" type="range" min="60" max="140" value="90"/>
+    </div>
+    <div id="chordDisplay" class="chordDisplay"></div>
+  </section>
+  <section class="tips">
+    <p>Tap a chord box to preview a plucked voicing. Songs load in the key shown — no transpose (fixed).</p>
+  </section>
+</main>
+<script src="app_v2.js"></script>
+</body>
+</html>
